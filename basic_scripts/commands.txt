@@ -2,3 +2,24 @@ which $SHELL
 
 bash himom.sh
 
+echo $RANDOM
+
+echo $USER
+
+echo $PWD
+
+echo $HOSTNAME
+
+twitter="Elon Musk"
+
+echo $twitter
+
+export twitter
+
+.bashrc  // login -> script
+
+nano .bashrc // export twitter="Elon Musk"
+
+echo $(( 2 + 3 ))
+
+echo $(( $RANDOM % 10 ))
