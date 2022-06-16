@@ -14,8 +14,8 @@ alias gosu='/bin/bash /home/username/scripts/goserver.sh'
 gosu frontprod-0
 
 # Используем для перехода по определенному порту
-gosu frontprod-0 23805
+gosu hostname 23805
 
 # Используем конкретного юзера и порт
-gosu frontprod-0 23805 centos
+gosu hostname 23805 user_name
 ```
