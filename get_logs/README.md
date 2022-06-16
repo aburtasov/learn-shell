@@ -1,13 +1,14 @@
-get_log.sh
+# get_log.sh
 Скрипт для сбора nginx с апи.
-В api_prod_list.txt перечислены айпишники машин.
-По умолчанию собираются с каждой тачки по 1000 строк.
+В `api_prod_list.txt` перечислены айпишники машин.
+По умолчанию собираются с каждой тачки по 1000 строк. 
 Для первичной оценки проблемы этого достаточно.
 
-Как запускать
-Запускаем с MCS
 
-/bin/bash /home/centos/nparamonov/get_logs.sh /home/centos/nparamonov/api-prod-list
+## Как запускать
+Запускаем с MCS
+```
+/bin/bash /home/get_logs.sh /home/api-prod-list.txt
 
 Begin to run on the hosts
 in file 47 strings
@@ -43,12 +44,17 @@ End run to the hostrver: 47/47 10.10.20.237
     279 "GET /videofone?category=4 200 "okhttp/4.9.0"
     251 "GET /news/main?offset=0&limit=20 200 "okhttp/4.9.0"
 
+```
 На выходе в месте запуска скрипта будет создан файл logs.txt, который можно использовать для дальнейшего анализа.
 
-Как проанализировать файл logs.txt
+
+### Как проанализировать файл logs.txt 
 На наличие 50x-х:
-
+```
 grep '" 50' logs.txt | awk '{print $6" " $7" "$9" "$NF}'  | sort | uniq -c | sort -nr | head
-На наличие 40x-ых
+```
 
+На наличие 40x-ых
+```
 grep '" 40' logs.txt | awk '{print $6" " $7" "$9" "$NF}'  | sort | uniq -c | sort -nr | head
+```
