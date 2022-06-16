@@ -6,7 +6,7 @@
 
 
 ## Как запускать
-Запускаем с MCS
+
 ```
 /bin/bash /home/get_logs.sh /home/api-prod-list.txt
 
