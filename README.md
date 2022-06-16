@@ -1,0 +1,2 @@
+# learn-shell
+Bash basics
