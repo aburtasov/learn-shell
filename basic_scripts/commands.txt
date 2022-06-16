@@ -1,0 +1,4 @@
+which $SHELL
+
+bash himom.sh
+
