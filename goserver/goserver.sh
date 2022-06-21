@@ -6,5 +6,5 @@ myUser=${3:-username}
 echo $hostIp
 
 
-ssh -t -i ~/.ssh/id_rsa $myUser@10.10.20.117 "sudo ssh -p $myPort username@"$hostIp 
+ssh -t -i ~/.ssh/id_rsa $myUser@10.113.25.127 "sudo ssh -p $myPort username@"$hostIp 
 
