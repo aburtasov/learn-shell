@@ -24,7 +24,7 @@ echo "in file $counter strings"
 for word in $(cat $1)
 do
   echo -ne "try get log from server: $count/$counter $word \r"
-  ssh centos@$word 'sudo tail -n 1000 /var/log/nginx/access.log' >> logs.txt
+  ssh username@$word 'sudo tail -n 1000 /var/log/nginx/access.log' >> logs.txt
   count=$((count+1))
 done
 echo 'End run to the host'
